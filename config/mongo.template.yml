@@ -1,0 +1,20 @@
+defaults: &defaults
+  host: 127.0.0.1
+  port: 27017
+
+development:
+  <<: *defaults
+  database: story
+  username: story
+  password: story
+
+test:
+  <<: *defaults
+  database: story_test
+
+# set these environment variables on your prod server
+production:
+  <<: *defaults
+  database: mongo
+  username: <%= ENV['MONGO_USERNAME'] %>
+  password: <%= ENV['MONGO_PASSWORD'] %>

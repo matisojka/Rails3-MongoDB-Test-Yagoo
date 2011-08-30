@@ -2,3 +2,8 @@
 db/*.sqlite3
 log/*.log
 tmp/**/*
+.redcar
+.rspec
+.DS_Store
+Gemfile.lock
+mongo.yml
