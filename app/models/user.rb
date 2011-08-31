@@ -26,7 +26,7 @@ class User
   # Methods :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
   def post_comment(body)
-    self.comments.create!(:message => body)
+    self.comments.create!(:message => body) unless body.blank?
   end
 
 end

@@ -5,14 +5,12 @@ Feature: Post Comment
   I want to pots a comment
 
   Scenario: Post comment with body content
-    Given a comment
-    When I set the body content to "This is a new comment"
-    And I post the comment
-    Then the comment should be saved
+    Given I am a user
+    When I post a comment with the content "This is a new comment"
+    Then the user should have a comment
     And the comment body should be "This is a new comment"
 
   Scenario: Post comment with empty body
-    Given a comment
-    When I set the body content to ""
-    And I post the comment
-    Then the comment shouldn't be posted
+    Given I am a user
+    When I post a comment with blank content
+    Then the user shouldn't have any comment

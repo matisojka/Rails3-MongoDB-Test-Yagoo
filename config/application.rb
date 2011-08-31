@@ -41,5 +41,9 @@ module Mongo
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters << :password
+
+    config.session_store :cookie_store,
+      :key    => '_mongo_session',
+      :secret => '406f84b1343832d39fc5934efec40a83938afa4d4fe1ef9712f6b7e64ee09371fa979f8edd5755b3e73db97773b4063d07a8b6ad55d8ac2999b85ef1ccae4d50'
   end
 end

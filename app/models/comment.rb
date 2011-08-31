@@ -28,25 +28,6 @@ class Comment
     self.user.nil? ? self.user = user : raise("Cannot change the user")
   end
 
-  def username
-    self.user.username
-  end
-
   # Methods :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-  def self.all_messages
-    Comment.all.map(&:message)
-  end
-
-  def self.contributors_quantities
-    Comment.all.inject(Hash.new(0)) do |memo, comment|
-      memo[comment.user.username] += 1 ; memo
-    end
-  end
-
-  def self.comments_given(username)
-    user = User.find_by_username(username)
-    user.comments
-  end
 
 end
