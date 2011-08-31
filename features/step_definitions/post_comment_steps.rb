@@ -18,6 +18,6 @@ When /^I post a comment with blank content$/ do
   @user.post_comment("")
 end
 
-Then /^the user shouldn't have any comment$/ do
+Then /^the user shouldn't have any comments$/ do
   @user.comments.size.should be(0)
 end

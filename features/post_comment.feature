@@ -13,4 +13,4 @@ Feature: Post Comment
   Scenario: Post comment with empty body
     Given I am a user
     When I post a comment with blank content
-    Then the user shouldn't have any comment
+    Then the user shouldn't have any comments
